@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Gmaes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <style>
+      #box {
+        border: 5px solid black;
+      }
+      input[type=text], input[type=password] ,input[type=number] ,input[type=date] ,input[type=email]{
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        width: 100%;
+        border: none;
+        background: #f1f1f1;
+      }
+      #button {
+            background-color: #4CAF50;
+            color: rgba(8, 8, 197, 0.789);
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+            font-size: 200%;
+      }
+
+       #button:hover {
+            opacity: 1;
+       }
+
+  </style>
+</head>
+<body>
+    <div class="jumbotron text-center" style="margin-bottom:0px"  id="test">
+        <h1>Step 1 of 1</h1>
+    </div>
+    <div class="container pt-3">
+        <div class="row">
+            <div class="col-sm-3 pt-3"></div>
+            <div class="col-sm-6 pt-3" id="box">
+                <label for="name"><b> First Name</b></label>
+                <input type="text" class="space" placeholder="First Name" name="name" required>
+                <br>
+                <label for="name"><b> Middle Name</b></label>
+                <input type="text" class="space" placeholder="Middle Name" name="name" >
+                <br>
+                <label for="name"><b> Last Name</b></label>
+                <input type="text" class="space" placeholder="Last Name" name="name" required>
+                <br>
+                <label for="Cell_Number"><b> Mobile No</b></label>
+                <input type="Number" class="space"  name="Cell_Number" required>
+                <br>
+                <label for="age"><b> Age</b></label>
+                <input type="date" class="space" id="age" name="age" required>
+                <br>
+                <label for="username"><b> Username</b></label>
+                <input type="email" class="space" placeholder="Username" name="username" required>
+                <br>
+                <label for="psw"><b> Password</b></label>
+                <input type="password" class="space" id="psw" required>
+                <br>
+                <label for="rep_psw"><b> Password</b></label>
+                <input type="password" class="space" id="psw" required>
+            </div>
+            <div class="col-sm-3 pt-3"></div>
+        </div>
+        <input type="checkbox" class="space" id="T&C" required>
+        <label for="T&C"> I agree!!!</label>
+        <br>
+        <button type="submit" id="button">Submit</button>
+    </div>
+</body>
+</html>
+
+
+
+
+
