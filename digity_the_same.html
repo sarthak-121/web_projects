@@ -8,7 +8,18 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
+  <style>
+      input[type=text], input[type=password] ,input[type=number] ,input[type=date] ,input[type=email] {
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        width: 100%;
+        border: none;
+        background: #f1f1f1;
+      }
+    .new_user {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
     <div class="jumbotron text-center" style="margin-bottom:0px"  id="test">
@@ -28,22 +39,44 @@
                 <a class="nav-link" href="Games.html" >Games</a> 
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="Games.html" >Games</a>
-            </li>    
+              <a class="nav-link" href="#">Apps</a>
+            </li>   
           </ul>
           <ul class="navbar-nav  ml-auto">
               <li class="nav-item">
                 <a class="nav-link" href="sign_up.html" >Sign Up</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" >Log In</a>
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">Log in</a>
               </li>
           </ul>
         </div>  
       </nav>
+
+            <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <h5 class="modal-title " id="exampleModalLabel">Log in</h5>
+            </div>
+            <div class="modal-body">
+              <label for="username"><b> Username</b></label>
+              <input type="email" class="space" placeholder="Username" id="usr" required>
+              <br>
+              <label for="psw"><b> Password</b></label>
+              <input type="password" class="space" placeholder="password" id="psw" required>
+              <br>
+              <hr>
+              <p class="new_user">New User?<a href="sign_up.html">Create account.</a></p> 
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
     
       <div class="container pt-3">
         <div class="row">

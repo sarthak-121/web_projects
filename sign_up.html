@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Gmaes</title>
+  <title>sign ip</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -28,11 +28,17 @@
             width: 100%;
             opacity: 0.9;
             font-size: 200%;
+            margin-bottom: 100px;
       }
-
        #button:hover {
             opacity: 1;
-       }
+      }
+      .already_a_user {
+        text-align: center;
+      }
+      .new_user {
+        text-align: center;
+      }
 
   </style>
 </head>
@@ -59,21 +65,55 @@
                 <label for="age"><b> Age</b></label>
                 <input type="date" class="space" id="age" name="age" required>
                 <br>
+                <label for="Cell_Number"><b> Gender </b></label>
+                <div class="checkbox">
+                  <label><input type="checkbox" value=""> Male</label>
+                  <label><input type="checkbox" value=""> Female</label>
+                </div>
+                <br>
                 <label for="username"><b> Username</b></label>
-                <input type="email" class="space" placeholder="Username" name="username" required>
+                <input type="email" class="space" placeholder="Username" id="usr" required>
                 <br>
                 <label for="psw"><b> Password</b></label>
-                <input type="password" class="space" id="psw" required>
-                <br>
-                <label for="rep_psw"><b> Password</b></label>
-                <input type="password" class="space" id="psw" required>
+                <input type="password" class="space" placeholder="password" id="psw" required>
             </div>
             <div class="col-sm-3 pt-3"></div>
         </div>
         <input type="checkbox" class="space" id="T&C" required>
-        <label for="T&C"> I agree!!!</label>
+        <label for="T&C"> I agree with <a href="log_in.html">terms & Condition.</a></label>
         <br>
-        <button type="submit" id="button">Submit</button>
+        <p class="already_a_user">Already a user?<a href="#" data-toggle="modal" data-target="#exampleModal"> Log in</a></p>
+        <br>
+        <button type="submit" id="button" onclick="save_to_localStorage()">Submit</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header text-center">
+                    <h5 class="modal-title " id="exampleModalLabel">Log in</h5>
+                  </div>
+                  <div class="modal-body">
+                    <label for="username"><b> Username</b></label>
+                    <input type="email" class="space" placeholder="Username" id="usr" required>
+                    <br>
+                    <label for="psw"><b> Password</b></label>
+                    <input type="password" class="space" placeholder="password" id="psw" required>
+                    <br>
+                    <hr>
+                    <p class="new_user">New User?<a href="sign_up.html">Create account.</a></p> 
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        <script src="s_u_js.js">
+        </script>
+
     </div>
 </body>
 </html>
