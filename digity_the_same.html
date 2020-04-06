@@ -21,7 +21,7 @@
     }
   </style>
 </head>
-<body>
+<body onload="checkForUser()">
     <div class="jumbotron text-center" style="margin-bottom:0px"  id="test">
         <h1>Website</h1>
         <p1>The Website!</p1>
@@ -44,11 +44,21 @@
           </ul>
           <ul class="navbar-nav  ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="sign_up.html" >Sign Up</a>
+                <a class="nav-link" id="sign_link" href="sign_up.html" >Sign Up</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">Log in</a>
+                <a class="nav-link" id="log_link" href="#" data-toggle="modal" data-target="#exampleModal">Log in</a>
               </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" id="user_link" href="#" ></a>
+                <ul class="dropdown-menu">
+                  <p id="user_greetings"></p>
+                  <br>
+                  <br>
+                  <hr>
+                  <button type="button" class="btn btn-secondary" onclick="logOut()">Log out</button>
+                </ul>
+              </li>              
           </ul>
         </div>  
       </nav>
@@ -62,17 +72,17 @@
             </div>
             <div class="modal-body">
               <label for="username"><b> Username</b></label>
-              <input type="email" class="space" placeholder="Username" id="usr" required>
+              <input type="email" class="space" placeholder="Username" id="log_usr" required>
               <br>
               <label for="psw"><b> Password</b></label>
-              <input type="password" class="space" placeholder="password" id="psw" required>
+              <input type="password" class="space" placeholder="password" id="log_psw" required>
               <br>
               <hr>
               <p class="new_user">New User?<a href="sign_up.html">Create account.</a></p> 
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Submit</button>
+              <button type="button" class="btn btn-primary" onclick="checkCredentials()">Submit</button>
             </div>
           </div>
         </div>
@@ -110,6 +120,9 @@
     <div class="jumbotron text-center" style="margin-top:200px">
        <p>Footer</p>
     </div>  
+
+    <script src="s_u_js.js">
+    </script>
 
 </body>
 </html>
