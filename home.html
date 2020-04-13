@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>home_page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <style>
+      input[type=text], input[type=password] ,input[type=number] ,input[type=date] ,input[type=email] {
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        width: 100%;
+        border: none;
+        background: #f1f1f1;
+      }
+    .new_user {
+      text-align: center;
+    }
+  </style>
+</head>
+<body onload="checkForUser()">
+    <div class="jumbotron text-center" style="margin-bottom:0px"  id="test">
+        <h1>Website</h1>
+        <p1>The Website!</p1>
+    </div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav" >
+            <li class="nav-item">
+              <a class="nav-link" href="digity_the_same" >Home</a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Games.html" >Games</a> 
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Apps</a>
+            </li>   
+          </ul>
+          <ul class="navbar-nav  ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" id="sign_link" href="sign_up.html" >Sign Up</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="log_link" href="#" data-toggle="modal" data-target="#exampleModal">Log in</a>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" id="user_link" href="#" ></a>
+                <ul class="dropdown-menu">
+                  <p id="user_greetings"></p>
+                  <br>
+                  <br>
+                  <hr>
+                  <button type="button" class="btn btn-secondary" onclick="logOut()">Log out</button>
+                </ul>
+              </li>              
+          </ul>
+        </div>  
+      </nav>
+
+            <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <h5 class="modal-title " id="exampleModalLabel">Log in</h5>
+            </div>
+            <div class="modal-body">
+              <label for="username"><b> Username</b></label>
+              <input type="email" class="space" placeholder="Username" id="log_usr" required>
+              <br>
+              <label for="psw"><b> Password</b></label>
+              <input type="password" class="space" placeholder="password" id="log_psw" required>
+              <br>
+              <hr>
+              <p class="new_user">New User?<a href="sign_up.html">Create account.</a></p> 
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="checkCredentials()">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="container pt-3">
+        <div class="row">
+          <div class="col-sm-4 pt-3 bg-dark text-white">
+            <h3>HTML</h3>
+            <p>basic html website</p>
+            <p>explore and enjoy</p>
+          </div>
+          <div class="col-sm-4 pt-3">
+          </div>
+          <div class="col-sm-4 pt-3 bg-dark text-white" >
+            <h3>Bootstrap</h3>
+            <p>responsive bootstrap website</p>
+            <p>explore and enjoy</p>
+          </div>
+        </div>
+      </div>
+      <div class="container pt-3 ">
+          <div class="row">
+              <div class="col-sm-4">
+              </div> 
+              <div class="col-sm-4 pt-3 bg-dark text-white">
+                <h3>CSS</h3>
+                <p>with a little css</p>
+                <p>explore and enjoy</p> 
+              </div>
+              <div class="col-sm-4">
+            </div> 
+          </div>
+      </div>
+    <div class="jumbotron text-center" style="margin-top:200px">
+       <p>Footer</p>
+    </div>  
+
+    <script src="s_u_js.js">
+    </script>
+
+</body>
+</html>
